@@ -12,7 +12,7 @@ def get_url():
 
 def get_content():
     for get in get_url():
-        r = requests.get(get,timeout=1)
+        r = requests.get(get,timeout=5)
         soup = bs(r.text, 'lxml')
         for t in soup.findAll('div',{'class':'bl-item-title'}):
             tit = (t.text)
