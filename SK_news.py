@@ -6,7 +6,7 @@ def get_url():
     page = set()
     poisk = u"женщина"
     url = u"http://tuva.sledcom.ru/search/?q="+poisk+"&page="
-    for i in range(1,23):
+    for i in range(1,23): # 23 количество страниц выдачи - смотрите на сайте
         page.add(url+str(i))
     return page
 
