@@ -11,7 +11,6 @@ def get_url():
     return page
 
 def get_content():
-    title = set()
     for get in get_url():
         r = requests.get(get,timeout=1)
         soup = bs(r.text, 'lxml')
